@@ -118,7 +118,7 @@
 
 <header>
     <h1>Privacy Policy</h1>
-    <p>iScore Football App &nbsp;·&nbsp; Last updated: March 28, 2026</p>
+    <p>iScore Football App &nbsp;·&nbsp; Last updated: July 21, 2026</p>
 </header>
 
 <main>
@@ -126,8 +126,8 @@
     <section>
         <h2>1. Introduction & Controller</h2>
         <p>
-            This Privacy Policy explains how the <strong>iScore Football</strong> Android application
-            ("App", "we", "our") collects, processes, and uses your data when you use the App.
+            This Privacy Policy explains how the <strong>iScore Football</strong> mobile application
+            for iOS and Android ("App", "we", "our") collects, processes, and uses your data.
             We are committed to protecting your privacy and complying with applicable data protection
             laws, including the EU General Data Protection Regulation (GDPR / DSGVO) and the
             California Consumer Privacy Act (CCPA).
@@ -150,7 +150,11 @@
     <section>
         <h2>2. Data We Collect</h2>
 
-        <p>The App collects only the minimum data necessary to provide its features.</p>
+        <p>
+            The App can be used <strong>without an account</strong> — live scores, fixtures, and
+            statistics require no sign-in and no personal data. Additional data is processed only
+            when you use optional features (account, iScore&nbsp;Plus, AI Smart Search, feedback).
+        </p>
 
         <table>
             <thead>
@@ -163,53 +167,49 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Favorite team selections (IDs &amp; names)</td>
-                    <td>Personalise main screen</td>
+                    <td>Favorite team &amp; national team selections, UI preferences</td>
+                    <td>Personalise the App</td>
                     <td>Local device only</td>
                     <td><span class="badge green">No</span></td>
-                </tr>
-                <tr>
-                    <td>Preferred national team selection</td>
-                    <td>Personalise main screen</td>
-                    <td>Local device only</td>
-                    <td><span class="badge green">No</span></td>
-                </tr>
-                <tr>
-                    <td>Dashboard card layout / order</td>
-                    <td>Remember UI preferences</td>
-                    <td>Local device only</td>
-                    <td><span class="badge green">No</span></td>
-                </tr>
-                <tr>
-                    <td>User-submitted feedback text</td>
-                    <td>Improve the App</td>
-                    <td>Sent to Notion (see §5)</td>
-                    <td><span class="badge red">Yes — only if you submit</span></td>
-                </tr>
-                <tr>
-                    <td>Crash reports &amp; diagnostics</td>
-                    <td>Detect and fix bugs</td>
-                    <td>Sent to Firebase Crashlytics</td>
-                    <td><span class="badge red">Yes — automatic</span></td>
-                </tr>
-                <tr>
-                    <td>App usage analytics</td>
-                    <td>Understand feature usage</td>
-                    <td>Sent to Firebase Analytics</td>
-                    <td><span class="badge red">Yes — automatic</span></td>
                 </tr>
                 <tr>
                     <td>League / team / fixture IDs (query parameters)</td>
                     <td>Fetch football data</td>
-                    <td>Sent to sports data APIs</td>
+                    <td>Sent to our backend server (see §7)</td>
                     <td><span class="badge red">Yes — automatic</span></td>
+                </tr>
+                <tr>
+                    <td>Email address, display name, account ID</td>
+                    <td>Optional account (Sign in with Google / Apple)</td>
+                    <td>Supabase, hosted in the EU (see §4)</td>
+                    <td><span class="badge red">Yes — only if you sign in</span></td>
+                </tr>
+                <tr>
+                    <td>Subscription status &amp; purchase metadata</td>
+                    <td>Provide the iScore&nbsp;Plus subscription</td>
+                    <td>Apple / Google &amp; RevenueCat (see §5)</td>
+                    <td><span class="badge red">Yes — only if you subscribe</span></td>
+                </tr>
+                <tr>
+                    <td>AI search questions &amp; usage counters</td>
+                    <td>Answer your question, enforce fair-use limits</td>
+                    <td>Our servers &amp; AI providers (see §6)</td>
+                    <td><span class="badge red">Yes — only when you use Smart Search</span></td>
+                </tr>
+                <tr>
+                    <td>Feedback you submit</td>
+                    <td>Improve the App</td>
+                    <td>Featurebase (see §8)</td>
+                    <td><span class="badge red">Yes — only if you submit</span></td>
                 </tr>
             </tbody>
         </table>
 
         <p>
-            <strong>We do not collect:</strong> your name, email address, phone number, location data,
-            contacts, payment information, or any biometric data.
+            <strong>We do not collect:</strong> your location, contacts, photos, advertising
+            identifiers, or biometric data. We never see or store your payment details —
+            payments are handled entirely by Apple and Google (see §5). Your email address and
+            name are processed only if you voluntarily create an account.
         </p>
     </section>
 
@@ -217,112 +217,153 @@
         <h2>3. Legal Basis for Processing (GDPR Art. 6)</h2>
         <ul>
             <li>
-                <strong>Legitimate Interest (Art. 6(1)(f))</strong> — crash reporting and analytics
-                to maintain a stable, functional App.
+                <strong>Contract Performance (Art. 6(1)(b))</strong> — fetching football data,
+                managing your account, providing the iScore&nbsp;Plus subscription, and answering
+                your AI search questions are necessary to deliver the services you request.
+            </li>
+            <li>
+                <strong>Legitimate Interest (Art. 6(1)(f))</strong> — server logs and usage
+                counters to keep the service stable, prevent abuse, and enforce fair-use limits.
             </li>
             <li>
                 <strong>Consent (Art. 6(1)(a))</strong> — feedback text is only sent when you
-                explicitly click the "Send" button.
-            </li>
-            <li>
-                <strong>Contract Performance (Art. 6(1)(b))</strong> — API requests for football
-                fixtures, standings, and statistics are necessary to deliver the core service
-                you requested.
+                explicitly submit it.
             </li>
         </ul>
     </section>
 
     <section>
-        <h2>4. Firebase Services (Google)</h2>
+        <h2>4. Account & Sign-In (Supabase)</h2>
         <p>
-            The App integrates <strong>Firebase</strong> services provided by Google LLC
-            (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA):
+            Creating an account is <strong>optional</strong> and only required for premium
+            features such as AI Smart Search and the iScore&nbsp;Plus subscription. You sign in
+            with <strong>Sign in with Google</strong> or <strong>Sign in with Apple</strong>;
+            we never receive or store a password.
         </p>
         <ul>
-            <li><strong>Firebase Crashlytics</strong> — collects anonymised crash reports including
-                device model, OS version, app version, and the stack trace at the time of a crash.
-                No personal identifiers are intentionally included.</li>
-            <li><strong>Firebase Analytics</strong> — collects pseudonymous usage events such as
-                screens viewed, session duration, and device/OS metadata.</li>
-            <li><strong>Firebase Authentication</strong> — used for anonymous authentication only.
-                No email or password is required or stored.</li>
-            <li><strong>Cloud Firestore</strong> — may store your team-selection preferences linked
-                to an anonymous Firebase Auth UID.</li>
+            <li><strong>Data stored:</strong> your email address, the display name provided by
+                Google/Apple, a unique account ID, and sign-in timestamps.</li>
+            <li><strong>Where:</strong> our authentication and database provider is
+                <strong>Supabase</strong>, with data hosted in the
+                <strong>European Union (Frankfurt, Germany)</strong>.</li>
+            <li><strong>Identity providers:</strong> Google LLC and Apple Inc. process the sign-in
+                itself under their own privacy policies
+                (<a href="https://policies.google.com/privacy" target="_blank">Google</a>,
+                <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple</a>).</li>
+            <li><strong>Deletion:</strong> you can permanently delete your account at any time
+                directly in the App (Settings → Account → Delete account). This removes your
+                account data and usage counters from our systems.</li>
         </ul>
+    </section>
+
+    <section>
+        <h2>5. iScore Plus Subscription</h2>
         <p>
-            Data processed by Firebase may be transferred to and stored on Google servers in the
-            United States. Google participates in the EU–US Data Privacy Framework.
-            See <a href="https://firebase.google.com/support/privacy" target="_blank">
-            firebase.google.com/support/privacy</a> for Google's data processing terms.
+            iScore&nbsp;Plus is an optional paid subscription. Payments are processed entirely by
+            <strong>Apple (App&nbsp;Store)</strong> or <strong>Google (Google&nbsp;Play)</strong>
+            under their own terms and privacy policies. <strong>We never receive your payment
+            details</strong> (no card numbers, no billing address).
         </p>
         <p>
-            <strong>GDPR Standard Contractual Clauses</strong> — Google offers SCCs for Firebase;
-            details at <a href="https://privacy.google.com/businesses/processorterms/" target="_blank">
-            privacy.google.com/businesses/processorterms</a>.
+            To recognise your subscription across devices and platforms, we use
+            <strong>RevenueCat, Inc.</strong> (San Francisco, USA) as a processor. RevenueCat
+            receives your account ID and store purchase metadata (product, purchase and expiry
+            dates, store receipt tokens) — no payment details. RevenueCat processes data under
+            GDPR Standard Contractual Clauses; see
+            <a href="https://www.revenuecat.com/privacy" target="_blank">revenuecat.com/privacy</a>.
+        </p>
+        <p>
+            Our server checks your subscription status (via your account ID) each time you use a
+            premium feature, so your subscription follows your account on all your devices.
         </p>
     </section>
 
     <section>
-        <h2>5. Notion (Feedback Only)</h2>
+        <h2>6. AI Smart Search</h2>
         <p>
-            When you voluntarily submit feedback via the in-app feedback form, the text you enter
-            (maximum 200 characters) is transmitted to <strong>Notion Labs Inc.</strong>
-            (2300 Harrison Street, San Francisco, CA 94110, USA) via its API.
-            The feedback is stored in a private Notion database accessible only to the App developer
-            and is used solely to improve the App. No other personal data is attached.
+            Smart Search lets you ask free-form football questions that are answered by an AI
+            model using our licensed sports data. When you send a question, the following
+            processing takes place:
         </p>
+        <ul>
+            <li><strong>What is transmitted:</strong> the text of your question, your app
+                language, and your account ID. Please do not include personal data in your
+                questions — it is not needed to answer them.</li>
+            <li><strong>Our server:</strong> the question is processed on our server hosted by
+                <strong>Railway</strong> in the <strong>EU (Amsterdam, Netherlands)</strong>.</li>
+            <li><strong>AI processing:</strong> to generate the answer, the question text is
+                forwarded to an AI language model via <strong>OpenRouter, Inc.</strong> (USA)
+                and its model hosting partners in the USA/EU under GDPR Standard Contractual
+                Clauses (<a href="https://openrouter.ai/privacy" target="_blank">openrouter.ai/privacy</a>).</li>
+            <li><strong>Logging:</strong> we store your questions together with your account ID,
+                the answer status, and timestamps in our EU-hosted database. We use these logs to
+                operate the service, enforce free-trial and fair-use limits, prevent abuse, and
+                improve answer quality.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>7. Sports Data & Backend Server</h2>
         <p>
-            Notion's privacy policy: <a href="https://www.notion.so/privacy" target="_blank">
-            notion.so/privacy</a>.
+            To fetch football fixtures, standings, lineups, and statistics, the App talks to our
+            own backend server (hosted by <strong>Hetzner Online GmbH</strong> in Germany), which
+            in turn retrieves sports data from <strong>RapidAPI / API-Football</strong>. Requests
+            contain only sport-related identifiers (league IDs, team IDs, fixture IDs) and
+            standard HTTP metadata (IP address, user-agent). Team and league images are served
+            through our own server as well.
         </p>
     </section>
 
     <section>
-        <h2>6. Sports Data APIs</h2>
+        <h2>8. Feedback (Featurebase)</h2>
         <p>
-            To fetch football fixtures, standings, lineups, and statistics, the App sends requests
-            to a custom backend server and to <strong>RapidAPI / API-Football</strong>. These
-            requests contain only sport-related identifiers (league IDs, team IDs, fixture IDs)
-            and standard HTTP metadata (IP address, user-agent). No personal data you have
-            entered is included. Team and league logo images are loaded from
-            <strong>media.api-sports.io</strong>.
+            The in-app feedback and roadmap section is provided by
+            <strong>Featurebase</strong>. If you choose to submit feedback or vote there, the
+            data you enter is processed by Featurebase under its own privacy policy:
+            <a href="https://www.featurebase.app/privacy" target="_blank">featurebase.app/privacy</a>.
+            Browsing football data in the App never sends anything to Featurebase.
         </p>
     </section>
 
     <section>
-        <h2>7. Data Retention</h2>
+        <h2>9. Data Retention</h2>
         <table>
             <thead>
                 <tr><th>Data</th><th>Retention Period</th></tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Local preferences (teams, card order)</td>
+                    <td>Local preferences (teams, layout)</td>
                     <td>Until you uninstall the App or clear app data</td>
                 </tr>
                 <tr>
-                    <td>Crash reports (Firebase Crashlytics)</td>
-                    <td>90 days (Firebase default)</td>
+                    <td>Account data (email, name, account ID)</td>
+                    <td>Until you delete your account in the App</td>
                 </tr>
                 <tr>
-                    <td>Analytics data (Firebase Analytics)</td>
-                    <td>14 months (Firebase default)</td>
+                    <td>Subscription metadata (RevenueCat)</td>
+                    <td>For the duration of the subscription relationship and statutory retention periods</td>
                 </tr>
                 <tr>
-                    <td>Feedback text (Notion)</td>
-                    <td>Until deleted by the developer; typically reviewed and deleted within 6 months</td>
+                    <td>AI search logs &amp; usage counters</td>
+                    <td>For as long as needed to operate the service and enforce usage limits; deleted with your account</td>
+                </tr>
+                <tr>
+                    <td>Feedback (Featurebase)</td>
+                    <td>Until deleted by the developer</td>
                 </tr>
             </tbody>
         </table>
     </section>
 
     <section>
-        <h2>8. Your Rights (GDPR)</h2>
+        <h2>10. Your Rights (GDPR)</h2>
         <p>If you are located in the EU / EEA, you have the following rights under the GDPR:</p>
         <ul>
             <li><strong>Right of access (Art. 15)</strong> — request a copy of your data.</li>
             <li><strong>Right to rectification (Art. 16)</strong> — correct inaccurate data.</li>
-            <li><strong>Right to erasure (Art. 17)</strong> — request deletion of your data.</li>
+            <li><strong>Right to erasure (Art. 17)</strong> — request deletion of your data
+                (account deletion is available directly in the App).</li>
             <li><strong>Right to restriction (Art. 18)</strong> — limit how your data is used.</li>
             <li><strong>Right to data portability (Art. 20)</strong> — receive data in a machine-readable format.</li>
             <li><strong>Right to object (Art. 21)</strong> — object to processing based on legitimate interest.</li>
@@ -339,7 +380,7 @@
     </section>
 
     <section>
-        <h2>9. California Residents (CCPA)</h2>
+        <h2>11. California Residents (CCPA)</h2>
         <p>
             If you are a California resident, you have the right to know what personal information
             we collect, request deletion, and opt out of the "sale" of personal information.
@@ -349,7 +390,7 @@
     </section>
 
     <section>
-        <h2>10. Children's Privacy</h2>
+        <h2>12. Children's Privacy</h2>
         <p>
             The App is not directed at children under the age of 13 (or 16 where required by law).
             We do not knowingly collect personal information from children. If you believe a child
@@ -359,17 +400,17 @@
     </section>
 
     <section>
-        <h2>11. Security</h2>
+        <h2>13. Security</h2>
         <p>
             We implement reasonable technical measures to protect data in transit and at rest.
-            Feedback submissions and API responses use HTTPS encryption. Local preferences are
-            stored in Android's DataStore on your device. However, no transmission over the
-            internet can be guaranteed to be completely secure.
+            All network communication uses HTTPS encryption; sign-in tokens are kept in your
+            device's secure storage, and local preferences never leave your device. However, no
+            transmission over the internet can be guaranteed to be completely secure.
         </p>
     </section>
 
     <section>
-        <h2>12. Changes to This Policy</h2>
+        <h2>14. Changes to This Policy</h2>
         <p>
             We may update this Privacy Policy from time to time. Changes will be posted at this
             URL. Material changes will be communicated via an in-app notice. The date at the top
@@ -379,7 +420,7 @@
     </section>
 
     <section>
-        <h2>13. Contact</h2>
+        <h2>15. Contact</h2>
         <div class="contact-box">
             <p>For any privacy-related questions or requests:</p>
             <p style="margin-top:10px;">
