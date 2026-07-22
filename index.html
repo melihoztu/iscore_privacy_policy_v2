@@ -118,7 +118,7 @@
 
 <header>
     <h1>Privacy Policy</h1>
-    <p>iScore Football App &nbsp;·&nbsp; Last updated: July 21, 2026</p>
+    <p>iScore Football App &nbsp;·&nbsp; Last updated: July 22, 2026</p>
 </header>
 
 <main>
@@ -153,7 +153,8 @@
         <p>
             The App can be used <strong>without an account</strong> — live scores, fixtures, and
             statistics require no sign-in and no personal data. Additional data is processed only
-            when you use optional features (account, iScore&nbsp;Plus, AI Smart Search, feedback).
+            when you use optional features (account, iScore&nbsp;Plus, AI Smart Search, feedback)
+            and, in the free version, for the banner advertisement described in §6.
         </p>
 
         <table>
@@ -175,8 +176,14 @@
                 <tr>
                     <td>League / team / fixture IDs (query parameters)</td>
                     <td>Fetch football data</td>
-                    <td>Sent to our backend server (see §7)</td>
+                    <td>Sent to our backend server (see §8)</td>
                     <td><span class="badge red">Yes — automatic</span></td>
+                </tr>
+                <tr>
+                    <td>Advertising identifier, IP address, device &amp; ad interaction data</td>
+                    <td>Show and measure the banner ad in the free version</td>
+                    <td>Google AdMob (see §6)</td>
+                    <td><span class="badge red">Yes — free version, after your consent choice</span></td>
                 </tr>
                 <tr>
                     <td>Email address, display name, account ID</td>
@@ -193,23 +200,31 @@
                 <tr>
                     <td>AI search questions &amp; usage counters</td>
                     <td>Answer your question, enforce fair-use limits</td>
-                    <td>Our servers &amp; AI providers (see §6)</td>
+                    <td>Our servers &amp; AI providers (see §7)</td>
                     <td><span class="badge red">Yes — only when you use Smart Search</span></td>
                 </tr>
                 <tr>
                     <td>Feedback you submit</td>
                     <td>Improve the App</td>
-                    <td>Featurebase (see §8)</td>
+                    <td>Featurebase (see §9)</td>
                     <td><span class="badge red">Yes — only if you submit</span></td>
                 </tr>
             </tbody>
         </table>
 
         <p>
-            <strong>We do not collect:</strong> your location, contacts, photos, advertising
-            identifiers, or biometric data. We never see or store your payment details —
-            payments are handled entirely by Apple and Google (see §5). Your email address and
-            name are processed only if you voluntarily create an account.
+            <strong>We do not collect:</strong> your precise (GPS) location, contacts, photos,
+            or biometric data. We never see or store your payment details — payments are handled
+            entirely by Apple and Google (see §5). Your email address and name are processed only
+            if you voluntarily create an account.
+        </p>
+        <p>
+            <strong>Advertising is the one exception</strong> to the above, and only in the free
+            version: our advertising partner Google AdMob accesses your device's advertising
+            identifier and derives an approximate location from your IP address in order to
+            deliver and measure ads. This happens only after you have made a choice in the
+            consent dialog, and never at all for iScore&nbsp;Plus subscribers. We ourselves never
+            receive your advertising identifier. See §6 for full details.
         </p>
     </section>
 
@@ -226,8 +241,12 @@
                 counters to keep the service stable, prevent abuse, and enforce fair-use limits.
             </li>
             <li>
-                <strong>Consent (Art. 6(1)(a))</strong> — feedback text is only sent when you
-                explicitly submit it.
+                <strong>Consent (Art. 6(1)(a), and § 25(1) TDDDG for access to your device)</strong>
+                — advertising and any reading of or writing to information on your device for
+                advertising purposes take place only after you have given consent in the in-app
+                consent dialog (see §6). Feedback text is only sent when you explicitly submit it.
+                You may withdraw consent at any time with effect for the future; withdrawal does
+                not affect the lawfulness of processing carried out beforehand.
             </li>
         </ul>
     </section>
@@ -279,7 +298,80 @@
     </section>
 
     <section>
-        <h2>6. AI Smart Search</h2>
+        <h2>6. Advertising (Google AdMob)</h2>
+        <p>
+            The free version of the App displays a single banner advertisement above the
+            navigation bar on the main screen. Advertising is what finances the free version.
+            <strong>iScore&nbsp;Plus subscribers see no advertising at all.</strong>
+        </p>
+        <p>
+            Ads are delivered by <strong>Google AdMob</strong>, operated in the EEA by
+            <strong>Google Ireland Limited</strong> (Gordon House, Barrow Street, Dublin 4,
+            Ireland). Google acts as an independent controller for the advertising data it
+            receives.
+        </p>
+        <ul>
+            <li>
+                <strong>What Google receives:</strong> your device's advertising identifier
+                (IDFA on iOS, Advertising ID on Android), your IP address and the approximate
+                location derived from it, device and operating-system information, and data
+                about which ads were requested, shown, clicked, or interacted with. Google uses
+                this to select and deliver ads, to measure their performance, and to detect
+                invalid traffic and fraud.
+            </li>
+            <li>
+                <strong>Your consent (EEA, UK, Switzerland):</strong> before the first ad
+                request, the App shows a consent dialog from Google's certified Consent
+                Management Platform (User Messaging Platform), based on the IAB Transparency
+                &amp; Consent Framework. No advertising identifier is read and no ad is loaded
+                before you have made your choice. If you decline personalised advertising, you
+                will still see ads, but <strong>non-personalised</strong> ones — selected from
+                coarse context such as the app's content and your approximate region, not from
+                a profile about you.
+            </li>
+            <li>
+                <strong>Withdrawing or changing your choice:</strong> you can reopen the consent
+                dialog at any time from the App's settings under <em>Privacy options</em>. In
+                addition, iOS offers a system-level control under <em>Settings → Privacy &amp;
+                Security → Tracking</em>, and Android lets you reset or delete your Advertising
+                ID under <em>Settings → Privacy → Ads</em>.
+            </li>
+            <li>
+                <strong>Apple App Tracking Transparency (iOS):</strong> personalised advertising
+                on iOS additionally requires the system tracking permission. If you decline it,
+                neither we nor Google access the IDFA, and you will only see non-personalised ads.
+            </li>
+            <li>
+                <strong>Ad measurement:</strong> the Google Mobile Ads SDK includes Google's app
+                measurement component, which records ad impressions and conversions in order to
+                bill advertisers and report performance.
+            </li>
+            <li>
+                <strong>International transfers:</strong> Google may process this data in the
+                United States and other countries outside the EEA. The transfer is based on the
+                EU Standard Contractual Clauses and Google's certification under the EU–US Data
+                Privacy Framework.
+            </li>
+            <li>
+                <strong>Retention:</strong> advertising data is retained by Google under its own
+                retention rules. We do not store advertising data ourselves.
+            </li>
+        </ul>
+        <p>
+            We do not receive your advertising identifier and we do not build advertising
+            profiles. From Google we only receive aggregated statistics such as the number of
+            impressions, clicks, and the resulting revenue. Details on how Google processes data
+            in its advertising products are available at
+            <a href="https://business.safety.google/privacy/" target="_blank">business.safety.google/privacy</a>,
+            and the current list of Google's advertising partners at
+            <a href="https://support.google.com/admob/answer/9012903" target="_blank">support.google.com/admob/answer/9012903</a>.
+            You can opt out of personalised Google advertising across services at
+            <a href="https://adssettings.google.com" target="_blank">adssettings.google.com</a>.
+        </p>
+    </section>
+
+    <section>
+        <h2>7. AI Smart Search</h2>
         <p>
             Smart Search lets you ask free-form football questions that are answered by an AI
             model using our licensed sports data. When you send a question, the following
@@ -303,7 +395,7 @@
     </section>
 
     <section>
-        <h2>7. Sports Data & Backend Server</h2>
+        <h2>8. Sports Data &amp; Backend Server</h2>
         <p>
             To fetch football fixtures, standings, lineups, and statistics, the App talks to our
             own backend server (hosted by <strong>Hetzner Online GmbH</strong> in Germany), which
@@ -315,7 +407,7 @@
     </section>
 
     <section>
-        <h2>8. Feedback (Featurebase)</h2>
+        <h2>9. Feedback (Featurebase)</h2>
         <p>
             The in-app feedback and roadmap section is provided by
             <strong>Featurebase</strong>. If you choose to submit feedback or vote there, the
@@ -326,7 +418,7 @@
     </section>
 
     <section>
-        <h2>9. Data Retention</h2>
+        <h2>10. Data Retention</h2>
         <table>
             <thead>
                 <tr><th>Data</th><th>Retention Period</th></tr>
@@ -352,12 +444,20 @@
                     <td>Feedback (Featurebase)</td>
                     <td>Until deleted by the developer</td>
                 </tr>
+                <tr>
+                    <td>Your advertising consent choice</td>
+                    <td>Stored locally on your device until you change it, reset it, or uninstall the App</td>
+                </tr>
+                <tr>
+                    <td>Advertising data (Google AdMob)</td>
+                    <td>Retained by Google under its own retention rules; we do not store advertising data ourselves</td>
+                </tr>
             </tbody>
         </table>
     </section>
 
     <section>
-        <h2>10. Your Rights (GDPR)</h2>
+        <h2>11. Your Rights (GDPR)</h2>
         <p>If you are located in the EU / EEA, you have the following rights under the GDPR:</p>
         <ul>
             <li><strong>Right of access (Art. 15)</strong> — request a copy of your data.</li>
@@ -368,9 +468,16 @@
             <li><strong>Right to data portability (Art. 20)</strong> — receive data in a machine-readable format.</li>
             <li><strong>Right to object (Art. 21)</strong> — object to processing based on legitimate interest.</li>
             <li>
+                <strong>Right to withdraw consent (Art. 7(3))</strong> — where processing is
+                based on your consent, in particular advertising, you can withdraw it at any
+                time with effect for the future (see §6).
+            </li>
+            <li>
                 <strong>Right to lodge a complaint</strong> with a supervisory authority —
-                in Germany, the competent authority is the
-                <a href="https://www.bfdi.bund.de" target="_blank">Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI)</a>.
+                for this App the competent authority is the
+                <a href="https://www.ldi.nrw.de" target="_blank">Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW)</a>,
+                as the controller is established in North Rhine-Westphalia. You may also lodge
+                a complaint with the supervisory authority of your own place of residence.
             </li>
         </ul>
         <p>
@@ -380,17 +487,29 @@
     </section>
 
     <section>
-        <h2>11. California Residents (CCPA)</h2>
+        <h2>12. California Residents (CCPA)</h2>
         <p>
             If you are a California resident, you have the right to know what personal information
-            we collect, request deletion, and opt out of the "sale" of personal information.
-            <strong>We do not sell personal information.</strong>
-            To submit a CCPA request, contact us at the address in §1.
+            we collect, request deletion, and opt out of the "sale" or "sharing" of personal
+            information.
+        </p>
+        <p>
+            <strong>We do not sell personal information for money.</strong> However, showing
+            <strong>personalised advertising</strong> through Google AdMob involves sharing your
+            advertising identifier and device data for cross-context behavioural advertising,
+            which the CCPA/CPRA treats as a "sale" or "sharing". You can opt out at any time by
+            reopening the consent dialog from the App's settings under <em>Privacy options</em>
+            and declining personalised advertising — you will then only see non-personalised
+            ads. iScore&nbsp;Plus subscribers are not shown advertising at all.
+        </p>
+        <p>
+            We do not knowingly sell or share the personal information of consumers under
+            16 years of age. To submit any other CCPA request, contact us at the address in §1.
         </p>
     </section>
 
     <section>
-        <h2>12. Children's Privacy</h2>
+        <h2>13. Children's Privacy</h2>
         <p>
             The App is not directed at children under the age of 13 (or 16 where required by law).
             We do not knowingly collect personal information from children. If you believe a child
@@ -400,7 +519,7 @@
     </section>
 
     <section>
-        <h2>13. Security</h2>
+        <h2>14. Security</h2>
         <p>
             We implement reasonable technical measures to protect data in transit and at rest.
             All network communication uses HTTPS encryption; sign-in tokens are kept in your
@@ -410,7 +529,7 @@
     </section>
 
     <section>
-        <h2>14. Changes to This Policy</h2>
+        <h2>15. Changes to This Policy</h2>
         <p>
             We may update this Privacy Policy from time to time. Changes will be posted at this
             URL. Material changes will be communicated via an in-app notice. The date at the top
@@ -420,7 +539,7 @@
     </section>
 
     <section>
-        <h2>15. Contact</h2>
+        <h2>16. Contact</h2>
         <div class="contact-box">
             <p>For any privacy-related questions or requests:</p>
             <p style="margin-top:10px;">
